@@ -1,6 +1,5 @@
-node ('JenkinsSlave') {
-stage ('Sample build process')
+node ('JenkinsSlave') 
 {
-sh 'echo "test message for SCM pull pipeline"'
-{
+    stage 'Sample build process'
+       sh 'echo "test message for SCM pull pipeline"'
 }
