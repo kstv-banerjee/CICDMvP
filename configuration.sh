@@ -1,6 +1,6 @@
 #! /bin/bash
 
-aws s3 cp --recursive s3://jenkinsconfigtemplate/jenkins_homeACtemplate .
+aws s3 cp --recursive s3://jenkinsconfigtemplate/JenkinsMasterTemplatenew/jenkins_new .
 sed -i "s/Url><\/jenkinsUrl/Url>http:\/\/$LBDns\/<\/jenkinsUrl/g" config.xml
 sed -i "s/Url><\/jenkinsUrl/Url>http:\/\/$LBDns\/<\/jenkinsUrl/g" jenkins.model.JenkinsLocationConfiguration.xml
 sed -i "s/tunnel><\/tunnel/tunnel>$LBDns:50000<\/tunnel/g" config.xml
